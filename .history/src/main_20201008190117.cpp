@@ -7,10 +7,5 @@ using namespace std;
 using namespace cv;
 int main()
 {
-    VideoCapture cap(0);
-    if(!cap.isOpened())
-    {
-        return -1;
-    }
     
 }

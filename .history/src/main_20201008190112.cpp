@@ -4,13 +4,8 @@
 #include "opencv2/opencv.hpp"
 #include "eigen3/Eigen/Eigen"
 using namespace std;
-using namespace cv;
+using nam
 int main()
 {
-    VideoCapture cap(0);
-    if(!cap.isOpened())
-    {
-        return -1;
-    }
     
 }

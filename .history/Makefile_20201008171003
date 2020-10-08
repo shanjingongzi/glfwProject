@@ -1,0 +1,12 @@
+CC=g++
+FLAG= -std=c++11 -g -Wall
+main : $(OBJS)
+	$(CC) $(FLAG) -o main $(OBJS) $(LIBDIR) $(LIBS)
+main.o:$(SRCS)
+	$(CC) $(FLAG) $(INCDIR) $(SRCS) -c
+%.o : $(SRCS)
+	$(CC) $(FLAG) $(INCDIR) $(SRCS) -c
+clean : 
+	rm -f *.o 
+
+
