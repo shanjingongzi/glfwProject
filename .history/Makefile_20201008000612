@@ -1,0 +1,8 @@
+
+main : $(OBJS)
+	$(CC) $(FLAG) -o main $(OBJS) $(LIBDIR) $(LIBS)
+%.o : $(SRCS)
+	$(CC) $(FLAG) $(INCDIR) $(SRCS) -c
+clean : 
+	rm -f *.o 
+

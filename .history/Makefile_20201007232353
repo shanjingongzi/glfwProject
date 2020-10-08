@@ -1,0 +1,2 @@
+SRCS:=$(wildcard ./src/*.cpp)
+OBJS:=$(patsubstr ./src/%.cpp )

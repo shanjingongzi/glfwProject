@@ -9,7 +9,6 @@ using namespace std;
 
 int main()
 {
-    namedWindow("window",WINDOW_AUTOSIZE);
     glfwInit();
     GLFWmonitor *monitor=nullptr;
     GLFWwindow*share=nullptr;

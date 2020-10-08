@@ -1,0 +1,8 @@
+SRCS:=$(wildcard ./src/*.cpp)
+OBJS:=$(patsubstr ./src/%.cpp, %.o,$(SRCS))
+CC:=g++
+FLAG:= -std=c++11 -g -Wall
+main : $(OBJS)
+	$(CC) $(FLAG) -o main $(OBJS)
+%.o : ./src/%.cpp
+	$(CC) $(FLAG) $(SRCS) -c

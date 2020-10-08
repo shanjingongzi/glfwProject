@@ -1,0 +1,13 @@
+SRCS:=$(wildcard ./src/*.cpp)
+OBJS:=$(patsubst ./src/%.cpp,%.o,$(SRCS))
+LIBS:=$(wildcard ./lib/*.so)
+LIBS:=$(patsubst ./lib/lib%.so,%,$(LIBS))
+INCDIR:=-I ./include -I usr/include/opencv4 -I 
+CC:=g++
+FLAG:= -std=c++11 -g -Wall
+main : $(OBJS)
+	$(CC) $(FLAG) -o main $(OBJS)
+%.o : $(SRCS)
+	$(CC) $(FLAG) $(SRCS) -c
+.PHONY : clean
+	rm -f *.o 

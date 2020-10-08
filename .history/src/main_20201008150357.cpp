@@ -9,8 +9,8 @@ using namespace std;
 
 int main()
 {
-    namedWindow("window",WINDOW_AUTOSIZE);
     glfwInit();
+    Mat image=imread("/home/shanjingongzi/图片/壁纸/desktop.jpg");
     GLFWmonitor *monitor=nullptr;
     GLFWwindow*share=nullptr;
     GLFWwindow *window=glfwCreateWindow(512,512,"opengl",monitor,share);

@@ -1,0 +1,6 @@
+SRCS:=$(wildcard ./src/*.cpp)
+OBJS:=$(patsubstr ./src/%.cpp, %.o,$(SRCS))
+CC:=g++
+flag:= -std=c
+main : main.o
+	
